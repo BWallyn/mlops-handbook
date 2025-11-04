@@ -1,0 +1,84 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.9"
+name = "mlops_handbook"
+readme = "README.md"
+dynamic = [ "version",]
+dependencies = [ "ipython>=8.10", "jupyterlab>=3.0", "notebook", "kedro~=1.0.0",]
+
+[project.scripts]
+mlops-handbook = "mlops_handbook.__main__:main"
+
+[project.optional-dependencies]
+dev = [ "pytest-cov~=3.0", "pytest-mock>=1.7.1, <2.0", "pytest~=7.2", "ruff~=0.12.0",]
+
+[tool.kedro]
+package_name = "mlops_handbook"
+project_name = "mlops-handbook"
+kedro_init_version = "1.0.0"
+tools = "['Linting', 'Testing', 'Data Structure']"
+example_pipeline = "False"
+source_dir = "src"
+
+[tool.ruff]
+line-length = 88
+show-fixes = true
+lint.select = [
+    "B",    # Bugbear
+    "C4",   # Comprehensions
+    "C90",  # mccabe
+    "D",    # Docstrings
+    "E",    # pycodestyle error
+    "W",    # pycodestyle warning
+    "F",    # flake8
+    "S",    # bandit
+    "N",    # pep8-naming
+    "RUF",  # ruff
+    "I",    # isort
+    "PD",   # pandas
+    "UP",   # pyupgrade
+    "PL",   # pylint
+    "T201", # print
+]
+lint.ignore = [
+    "E501", # line too long
+    "D100", # missing docstring
+    "D104", # missing docstring in public package
+    "D203", # One blank line before class docstring
+    "D205", # blank line between summary and description
+    "D212", # Multi-line docstring summary should start at the second line
+    "D400", # first line should end with a period, question mark or exclamation point
+    "D404", # first word of the docstring should not be "This"
+    "D407", # Missing dashed underline after section
+    "D413", # Missing blank line after section
+    "D415", # first line should end with a period, question mark or exclamation point
+    "N806", # Variable should be lowercase
+    "PD901",# Avoid using "df" as a variable name
+]
+
+[project.entry-points."kedro.hooks"]
+
+[tool.pytest.ini_options]
+addopts = "--cov-report term-missing --cov src/mlops_handbook -ra"
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = [ "pragma: no cover", "raise NotImplementedError",]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.pydocstyle]
+# Use Google-style docstrings.
+convention = "google"
+
+[tool.setuptools.dynamic.version]
+attr = "mlops_handbook.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
