@@ -14,6 +14,13 @@ What you will progressively learn:
 3. Run Bayesian optimization to find the best hyperparameters.
 
 
+## Project
+
+To get the best outputs of ths repo, we advise you to find a Data Science problem to work on, in order to apply what you will just learn here. Keep it simple, find a regression or classification problem online (Kaggle can be a great source of real datasets, or any other open data). The goal is to be able to apply to real problems what you will learn here.
+
+At the end of each part, you will find instructions to apply what you've learned to your project. We advise you to do it progressively.
+
+
 ## 🚀 Quick setup
 
 ```bash
