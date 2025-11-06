@@ -112,7 +112,7 @@ def optimize_hyperparams_hgb(
         random_state=42,
         **hyperparams,
     )
-    model.fit(X=df_train, y=y_train, X_val=df_val, y_val=y_val)
+    model.fit(X=df_train, y=y_train, X_val=df_val, y_val=y_val) # type: ignore
     val_predictions = model.predict(df_val)
     return root_mean_squared_error(y_true=y_val, y_pred=val_predictions)
 
