@@ -25,7 +25,7 @@ At the end of each part, you will find instructions to apply what you've learned
 
 ```bash
 # Clone the repository
-git https://github.com/YOUR_USERNAME/mlops-handbook.git
+git https://github.com/bwallyn/mlops-handbook.git
 
 cd mlops-handbook
 ```
