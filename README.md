@@ -14,11 +14,18 @@ What you will progressively learn:
 3. Run Bayesian optimization to find the best hyperparameters.
 
 
+## Project
+
+To get the best outputs of ths repo, we advise you to find a Data Science problem to work on, in order to apply what you will just learn here. Keep it simple, find a regression or classification problem online (Kaggle can be a great source of real datasets, or any other open data). The goal is to be able to apply to real problems what you will learn here.
+
+At the end of each part, you will find instructions to apply what you've learned to your project. We advise you to do it progressively.
+
+
 ## 🚀 Quick setup
 
 ```bash
 # Clone the repository
-git https://github.com/YOUR_USERNAME/mlops-handbook.git
+git https://github.com/bwallyn/mlops-handbook.git
 
 cd mlops-handbook
 ```
@@ -43,9 +50,24 @@ gitGraph
 
 We use **[`uv`](https://github.com/astral-sh/uv)** for the Python environment creation.
 
+You can use uv directly to create your environment and install the dependendcies:
 ```bash
 # Create environment
 uv venv
+# Install dependencies
+uv sync
+```
+
+Or you can create a venv and install the dependencies (example using Visual Studio Code):
+1. Download the python extension.
+2. ```ctrl+shift+p``` or ```cmd+shilf+p``` to open the dropdown menu of the python extensionand select the option to create a python environment `Python: Create Environment...`.
+3. Select `venv` (not the quick create).
+4. Use the right python version (>=3.12 is recommended).
+5. Don't install the dependencies of the project.
+6. Once created, you can open the terminal and install the dependencies:
+```bash
+# Install uv
+pip install uv
 # Install dependencies
 uv sync
 ```

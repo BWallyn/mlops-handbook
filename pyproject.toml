@@ -7,7 +7,18 @@ requires-python = ">=3.9"
 name = "mlops_handbook"
 readme = "README.md"
 dynamic = [ "version",]
-dependencies = [ "ipython>=8.10", "jupyterlab>=3.0", "notebook", "kedro~=1.0.0",]
+dependencies = [
+ "ipython>=8.10",
+ "jupyterlab>=3.0",
+ "notebook",
+ "kedro~=1.0.0",
+ "pandas>=2.3.3",
+ "pydantic>=2.12.4",
+ "pandera>=0.26.1",
+ "hypothesis>=6.141.1",
+ "optuna>=4.5.0",
+ "scikit-learn>=1.6.1",
+]
 
 [project.scripts]
 mlops-handbook = "mlops_handbook.__main__:main"
