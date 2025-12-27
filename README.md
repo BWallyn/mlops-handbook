@@ -12,6 +12,7 @@ What you will progressively learn:
 1. Analyze you data using EDA tools.
 2. Validate the parameters of your pipelines and the dataset you use to train your model.
 3. Run Bayesian optimization to find the best hyperparameters.
+4. Structure your repository and create robust pipelines.
 
 
 ## Project
