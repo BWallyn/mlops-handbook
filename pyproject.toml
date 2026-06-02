@@ -18,7 +18,6 @@ dependencies = [
  "hypothesis>=6.141.1",
  "optuna>=4.5.0",
  "scikit-learn>=1.6.1",
- "pyarrow>=21.0.0",
 ]
 
 [project.scripts]
